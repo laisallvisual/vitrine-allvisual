@@ -116,9 +116,7 @@ input,select,textarea{font:16px var(--body);border:1px solid var(--line);border-
     </section>
 
     <section id="view-agendas" hidden>
-      <div class="sec-head"><div><h2>Agenda com a sua arte</h2><p>Capa dura impressa com a identidade da sua empresa, de ponta a ponta.</p></div></div>
-      <div class="grid" id="grid-own"></div>
-      <div class="sec-head"><div><h2>Agendas premium com gravação</h2><p>Couro reciclado, cortiça, rPET e PU, com a sua marca gravada na capa. A5 com plano diário (352 páginas) e B5 com plano semanal (144 páginas), feriados do Brasil e mapas.</p></div>
+      <div class="sec-head"><div><h2>Agendas 2027</h2><p>Capa dura impressa com a sua arte ou modelos premium em couro reciclado, cortiça, rPET e PU com a sua marca gravada na capa. A5 com plano diário e B5 com plano semanal.</p></div>
         <div class="chips" role="group" aria-label="Filtrar agendas"><button class="chip" data-f="ag" data-v="todos" aria-pressed="true">Todas</button><button class="chip" data-f="ag" data-v="A5" aria-pressed="false">A5 diária</button><button class="chip" data-f="ag" data-v="B5" aria-pressed="false">B5 semanal</button><button class="chip" data-f="ag" data-v="eco" aria-pressed="false">Sustentáveis</button></div></div>
       <div class="grid" id="grid-ag"></div>
       <p class="note">As cores e a técnica de gravação variam por modelo. Na resposta ao seu pedido indicamos a melhor opção para a sua marca.</p>
@@ -161,7 +159,7 @@ const CAL=[
  {ref:"CAL-05",grp:"parede",img:"img/cal-parede-premium.jpg",nome:"Calendário de Parede Premium",spec:"12 páginas 4x4 cores em couché 170g, wire-o com pendente metálico.",opts:["A4 · 210×297mm","A3 · 297×420mm"],meta:["A4 ou A3"]},
  {ref:"CAL-06",grp:"parede",img:"img/cal-parede-colada.jpg",nome:"Calendário de Parede · Folhinha",spec:"Bloco de 12 folhas 210×210mm em offset 90g, colado em base de couché 300g 270×370mm com a sua marca.",opts:["Base 270×370mm"],meta:["Folhinha"]},
 ];
-const OWN=[{ref:"AG-00",own:true,img:"img/ag-propria.jpg",nome:"Agenda 2027 Capa Dura Personalizada",spec:"Capa dura com a sua arte e laminação fosca, miolo diário de 350 páginas, encadernação wire-o.",opts:["148×210mm (A5)"],meta:["Capa 100% personalizada"]}];
+const OWN=[{ref:"AG-00",own:true,fmts:["A5"],eco:false,img:"img/ag-propria.jpg",nome:"Agenda 2027 Capa Dura Personalizada",spec:"Capa dura com a sua arte e laminação fosca, miolo diário de 350 páginas, encadernação wire-o.",opts:["148×210mm (A5)"],meta:["Capa 100% personalizada"]}];
 const AG=[
  ["AG-01","spenser","Agenda Executiva com Porta-Caneta","Capa dura em PU, aba com porta-caneta que também fecha a agenda. Caneta inclusa.",["A5"],0],
  ["AG-02","musset","Agenda PU Reciclado com Placa Metálica","PU 58% reciclado, fecho magnético, suporte para caneta.",["A5"],1],
@@ -196,8 +194,7 @@ function render(){
   const fc=document.querySelector('[data-f="cal"][aria-pressed="true"]').dataset.v;
   const fa=document.querySelector('[data-f="ag"][aria-pressed="true"]').dataset.v;
   const gc=document.getElementById("grid-cal");gc.replaceChildren(...CAL.filter(p=>fc==="todos"||p.grp===fc).map(card));
-  document.getElementById("grid-own").replaceChildren(...OWN.map(card));
-  const ga=document.getElementById("grid-ag");ga.replaceChildren(...AG.filter(p=>fa==="todos"||(fa==="eco"?p.eco:p.fmts.includes(fa))).map(card));
+  const ga=document.getElementById("grid-ag");ga.replaceChildren(...[...OWN,...AG].filter(p=>fa==="todos"||(fa==="eco"?p.eco:p.fmts.includes(fa))).map(card));
 }
 document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{
   document.querySelectorAll(`.chip[data-f="${b.dataset.f}"]`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));render();}));
