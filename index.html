@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Calendários de mesa e de parede e agendas 2027 personalizados com a marca da sua empresa. All Visual, Barueri/SP. Peça seu orçamento.">
+<meta property="og:title" content="Calendários e Agendas 2027 | All Visual"><meta property="og:description" content="Modelos personalizados com a marca da sua empresa. Peça seu orçamento.">
+<meta property="og:image" content="img/cal-mesa-cartao.jpg"><meta property="og:type" content="website">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Calendários e Agendas 2027 | All Visual</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: faixa marinho com a marca, abas Calendários | Agendas, grade de cards com foto quadrada; pedido abre um painel lateral/folha inferior */
+:root{
+  --navy:#1d3a78; --navy-ink:#13285a; --sun:#f6c21c; --bg:#f6f7fb; --card:#ffffff;
+  --fg:#18203a; --muted:#5b647d; --line:#dde2ee; --chip:#eef1f8; --ok:#1f8a4c;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1424; --card:#171e33; --fg:#e8ecf7; --muted:#a3acc5; --line:#2a3452; --chip:#212a45; --navy:#2a4d97; --navy-ink:#0c1630; --ok:#4cc483; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1424; --card:#171e33; --fg:#e8ecf7; --muted:#a3acc5; --line:#2a3452; --chip:#212a45; --navy:#2a4d97; --navy-ink:#0c1630; --ok:#4cc483; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{background:var(--navy-ink);color:#fff}
+header .wrap{padding-block:28px 34px;display:grid;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;letter-spacing:.04em}
+.brand b{background:var(--sun);color:#13285a;border-radius:6px;padding:2px 7px;font-size:15px}
+.brand span{font-size:15px;opacity:.9}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,5vw,48px);line-height:1.05;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--sun)}
+.lead{margin:0;max-width:62ch;color:#cfd7ee}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.facts span{font-size:13.5px;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;color:#e8ecf7}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav.tabs .wrap{display:flex;gap:6px;padding-block:10px;flex-wrap:wrap;align-items:center}
+.tab{font:600 15px var(--body);border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:8px 18px;cursor:pointer;text-decoration:none}
+.tab[aria-current="page"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.tab:focus-visible,.btn:focus-visible,.chip:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+main .wrap{padding-block:26px 60px;display:grid;gap:34px}
+section{display:grid;gap:16px}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:10px}
+h2{font-family:var(--display);font-weight:800;font-size:24px;margin:0}
+.sec-head p{margin:2px 0 0;color:var(--muted);max-width:62ch}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font:600 13.5px var(--body);background:var(--chip);color:var(--fg);border:1px solid transparent;border-radius:999px;padding:5px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--navy);background:var(--card);color:var(--navy)}
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:var(--fg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:1;background:#fff;max-width:100%;position:relative}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;left:10px;top:10px;background:var(--sun);color:#13285a;font:700 12px var(--body);letter-spacing:.04em;text-transform:uppercase;border-radius:6px;padding:3px 8px}
+.tag.eco{background:#d9f2e3;color:#14603a}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.ref{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
+h3{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.2;margin:0}
+.spec{margin:0;color:var(--muted);font-size:14.5px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.meta span{font-size:12.5px;background:var(--chip);border-radius:6px;padding:2px 8px}
+.btn{font:700 15px var(--body);border:0;border-radius:10px;padding:11px 14px;cursor:pointer;background:var(--navy);color:#fff;width:100%}
+.btn.sun{background:var(--sun);color:#13285a}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.own .ph{display:grid;place-items:center;background:linear-gradient(135deg,#1d3a78,#13285a)}
+.cover{width:56%;aspect-ratio:148/210;background:#f6c21c;border-radius:4px 10px 10px 4px;box-shadow:inset 10px 0 0 rgba(0,0,0,.18),0 18px 30px rgba(0,0,0,.35);display:grid;align-content:space-between;padding:14% 12%;color:#13285a;font-family:var(--display)}
+.cover b{font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1}
+.cover small{font:700 11px var(--body);letter-spacing:.12em;text-transform:uppercase}
+.note{font-size:14px;color:var(--muted);border-left:3px solid var(--sun);padding-left:12px;max-width:75ch}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:22px 34px;display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--muted);font-size:14px}
+footer b{color:var(--fg)}
+/* pedido */
+.scrim{position:fixed;inset:0;background:rgba(10,16,35,.55);z-index:20;display:flex;justify-content:flex-end}
+.panel{background:var(--card);color:var(--fg);width:min(440px,100%);height:100%;overflow-y:auto;padding:22px max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 20px;display:grid;align-content:start;gap:14px;padding-top:calc(22px + env(safe-area-inset-top,0px))}
+@media (max-width:560px){.scrim{align-items:flex-end}.panel{height:auto;max-height:92%;border-radius:16px 16px 0 0;padding-left:max(18px,env(safe-area-inset-left,0px))}}
+.panel-head{display:grid;grid-template-columns:72px 1fr auto;gap:12px;align-items:center}
+.panel-head img{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#fff}
+.x{background:none;border:0;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;padding:4px 8px}
+label{font-weight:600;font-size:14px;display:grid;gap:5px}
+input,select,textarea{font:16px var(--body);border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:var(--bg);color:var(--fg);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qty-quick{display:flex;gap:6px;flex-wrap:wrap}
+.preview{white-space:pre-wrap;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:10px 12px;font-size:14px;margin:0}
+.send{display:grid;gap:8px}
+.contact{font-size:13.5px;color:var(--muted)}
+.contact b{color:var(--fg);user-select:all}
+.err{color:#c0392b;font-size:14px;margin:0}
+.ok{color:var(--ok);font-size:14px;margin:0}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .15s}.card:hover{transform:translateY(-2px)}}
+</style>
+
+</head><body>
+<header>
+  <div class="wrap">
+    <div class="brand"><b>AV</b><span>ALL VISUAL · Barueri/SP</span></div>
+    <h1>Calendários e Agendas <em>2027</em></h1>
+    <p class="lead">Modelos prontos para levar a marca da sua empresa para a mesa dos clientes e da equipe o ano inteiro. Escolha o modelo, informe a quantidade e receba o orçamento.</p>
+    <div class="facts"><span>Personalizados com a sua marca</span><span>A partir de 1 unidade nos calendários</span><span>Arte do calendário: R$ 150,00</span></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Seções">
+  <div class="wrap">
+    <a class="tab" href="#calendarios" id="tab-calendarios">Calendários</a>
+    <a class="tab" href="#agendas" id="tab-agendas">Agendas</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <section id="view-calendarios">
+      <div class="sec-head"><div><h2>Calendários 2027</h2><p>Impressão 4x4 cores, até 14 páginas nos modelos de mesa. O prazo de produção é informado no orçamento, conforme a quantidade.</p></div>
+        <div class="chips" role="group" aria-label="Filtrar calendários"><button class="chip" data-f="cal" data-v="todos" aria-pressed="true">Todos</button><button class="chip" data-f="cal" data-v="mesa" aria-pressed="false">De mesa</button><button class="chip" data-f="cal" data-v="parede" aria-pressed="false">De parede</button></div></div>
+      <div class="grid" id="grid-cal"></div>
+    </section>
+
+    <section id="view-agendas" hidden>
+      <div class="sec-head"><div><h2>Agenda com a sua arte</h2><p>Capa dura impressa com a identidade da sua empresa, de ponta a ponta.</p></div></div>
+      <div class="grid" id="grid-own"></div>
+      <div class="sec-head"><div><h2>Agendas premium com gravação</h2><p>Couro reciclado, cortiça, rPET e PU, com a sua marca gravada na capa. A5 com plano diário (352 páginas) e B5 com plano semanal (144 páginas), feriados do Brasil e mapas.</p></div>
+        <div class="chips" role="group" aria-label="Filtrar agendas"><button class="chip" data-f="ag" data-v="todos" aria-pressed="true">Todas</button><button class="chip" data-f="ag" data-v="A5" aria-pressed="false">A5 diária</button><button class="chip" data-f="ag" data-v="B5" aria-pressed="false">B5 semanal</button><button class="chip" data-f="ag" data-v="eco" aria-pressed="false">Sustentáveis</button></div></div>
+      <div class="grid" id="grid-ag"></div>
+      <p class="note">As cores e a técnica de gravação variam por modelo. Na resposta ao seu pedido indicamos a melhor opção para a sua marca.</p>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap"><span><b>ALL VISUAL IMPRESSÕES, SERVIÇOS E COMÉRCIO LTDA</b></span><span>Rua Platina, 222 · Jardim dos Camargos · Barueri/SP</span><span>(11) 4191-5372</span><span>orcamento@allvisual.com.br</span></div></footer>
+
+<div class="scrim" id="scrim" hidden>
+  <form class="panel" id="form" role="dialog" aria-modal="true" aria-labelledby="p-title" novalidate>
+    <div class="panel-head"><img id="p-img" alt=""><div><div class="ref" id="p-ref"></div><h3 id="p-title"></h3></div><button type="button" class="x" id="close" aria-label="Fechar">×</button></div>
+    <div id="step-form" class="send" style="gap:14px">
+    <label id="opt-wrap">Formato<select id="f-opt"></select></label>
+    <label>Quantidade<input id="f-qtd" type="number" inputmode="numeric" min="1" step="1" placeholder="Ex.: 50" required></label>
+    <div class="qty-quick" id="qq"></div>
+    <div class="row"><label>Seu nome<input id="f-nome" autocomplete="name" required></label><label>Empresa<input id="f-emp" autocomplete="organization"></label></div>
+    <div class="row"><label>E-mail<input id="f-email" type="email" autocomplete="email" required></label><label>Telefone / WhatsApp<input id="f-tel" type="tel" autocomplete="tel" placeholder="(11) 9…"></label></div>
+    <label>Observações (opcional)<textarea id="f-obs" rows="2" placeholder="Prazo desejado, cor, se já tem a arte…"></textarea></label>
+    <input id="f-site" name="site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+    <p class="err" id="err" hidden></p>
+    <button type="submit" class="btn" id="send">Enviar pedido de orçamento</button>
+    <a class="btn sun" id="wa" href="#" target="_blank" rel="noopener" style="text-align:center;text-decoration:none">Prefiro falar pelo WhatsApp</a>
+    </div>
+    <div id="step-ok" class="send" hidden>
+      <h3 style="color:var(--ok)">Pedido recebido!</h3>
+      <p class="spec">Obrigado. Nossa equipe comercial vai responder com o orçamento pelo e-mail informado. Se tiver pressa, fale com a gente no WhatsApp <b>(11) 97453-5122</b>.</p>
+      <button type="button" class="btn ghost" id="again">Ver outros modelos</button>
+    </div>
+  </form>
+</div>
+
+<script>
+const WA="5511974535122";
+const CAL=[
+ {ref:"CAL-01",grp:"mesa",img:"img/cal-mesa-cartao.jpg",nome:"Calendário de Mesa · Base em Triplex",spec:"Até 14 páginas 4x4 cores em couché 170g, base firme em triplex 300g, encadernação wire-o.",opts:["210×148mm (paisagem)","148×210mm (retrato)"],meta:["Mais pedido"]},
+ {ref:"CAL-02",grp:"mesa",img:"img/cal-mesa-rigida.jpg",nome:"Calendário de Mesa · Base Rígida",spec:"Até 14 páginas 4x4 cores em couché 170g, base em papelão 1,9mm revestida com a sua arte e laminação fosca, wire-o.",opts:["210×148mm"],meta:["Base rígida"]},
+ {ref:"CAL-03",grp:"mesa",img:"img/cal-mesa-acrilico.jpg",nome:"Calendário de Mesa · Base em Acrílico",spec:"Até 14 páginas 4x4 cores em couché 250g fosco, base em acrílico cristal 2mm com argolas.",opts:["210×148mm"],meta:["Acrílico cristal"]},
+ {ref:"CAL-04",grp:"mesa",img:"img/cal-mesa-kit.jpg",nome:"Kit Calendário com Bloco de Notas",spec:"Base rígida estendida revestida com a sua arte, calendário wire-o até 14 páginas e bloco de 50 folhas personalizadas.",opts:["Calendário 120×148mm + bloco 105×148mm"],meta:["Com bloco de notas"]},
+ {ref:"CAL-05",grp:"parede",img:"img/cal-parede-premium.jpg",nome:"Calendário de Parede Premium",spec:"12 páginas 4x4 cores em couché 170g, wire-o com pendente metálico.",opts:["A4 · 210×297mm","A3 · 297×420mm"],meta:["A4 ou A3"]},
+ {ref:"CAL-06",grp:"parede",img:"img/cal-parede-colada.jpg",nome:"Calendário de Parede · Folhinha",spec:"Bloco de 12 folhas 210×210mm em offset 90g, colado em base de couché 300g 270×370mm com a sua marca.",opts:["Base 270×370mm"],meta:["Folhinha"]},
+];
+const OWN=[{ref:"AG-00",own:true,img:"img/ag-propria.jpg",nome:"Agenda 2027 Capa Dura Personalizada",spec:"Capa dura com a sua arte e laminação fosca, miolo diário de 350 páginas, encadernação wire-o.",opts:["148×210mm (A5)"],meta:["Capa 100% personalizada"]}];
+const AG=[
+ ["AG-01","spenser","Agenda Executiva com Porta-Caneta","Capa dura em PU, aba com porta-caneta que também fecha a agenda. Caneta inclusa.",["A5"],0],
+ ["AG-02","musset","Agenda PU Reciclado com Placa Metálica","PU 58% reciclado, fecho magnético, suporte para caneta.",["A5"],1],
+ ["AG-03","stories","Agenda PU e Tecido com Bolso","Fecho magnético, bolso frontal e caneta inclusa.",["A5"],0],
+ ["AG-04","vertix","Agenda Semanal Resistente à Água","Capa em PU resistente à água, fecho magnético, caneta inclusa.",["B5"],0],
+ ["AG-05","austen","Agenda PU Reciclado e rPET","PU 58% reciclado com tecido rPET, fecho magnético.",["A5"],1],
+ ["AG-06","verlaine","Agenda Clássica com Detalhe Metálico","PU com peça metálica, fecho magnético e caneta inclusa.",["A5"],0],
+ ["AG-07","tagore","Agenda Couro Reciclado","Couro 58% reciclado, fecho magnético, caneta inclusa.",["A5","B5"],1],
+ ["AG-08","camus","Agenda Cortiça com Fecho Magnético","Capa em cortiça natural, miolo cor marfim.",["A5"],1],
+ ["AG-09","quental","Agenda Cortiça e Linho","Cortiça com linho colorido, elástico na mesma cor, miolo marfim.",["A5"],1],
+ ["AG-10","larsson","Agenda Semanal rPET","Tecido 100% PET reciclado, suporte para caneta.",["B5"],1],
+ ["AG-11","andresen","Agenda rPET com Fecho Magnético","Tecido 100% PET reciclado, fecho em PU.",["A5","B5"],1],
+ ["AG-12","ibsen","Agenda com Bolsos na Capa","PU com dois bolsos externos na capa.",["A5"],0],
+ ["AG-13","waters","Agenda PU à Base de Água","PU produzido à base de água, elástico e suporte para caneta.",["A5","B5"],1],
+ ["AG-14","simmel","Agenda Couro Reciclado com Argolas","Couro 58% reciclado, encadernação em argolas, elástico.",["A5"],1],
+ ["AG-15","brecht","Agenda Papel Reciclado com Argolas","Capa dura em papel 100% reciclado, acabamento fosco, argolas.",["A5"],1],
+ ["AG-16","pomar","Agenda Cortiça","Capa em cortiça natural, miolo cor marfim.",["A5","B5"],1],
+ ["AG-17","allende","Agenda Essencial","PU com fita marcadora. Modelo de entrada.",["A5","B5"],0],
+ ["AG-18","spect","Agenda Tecido","Capa em tecido poliéster, suporte para caneta.",["A5"],0],
+].map(([ref,img,nome,spec,fmts,eco])=>({ref,img:`img/ag-${img}.jpg`,nome,spec,fmts,eco:!!eco,
+  opts:fmts.map(f=>f==="A5"?"A5 · plano diário · 352 páginas":"B5 · plano semanal · 144 páginas"),meta:fmts.map(f=>f==="A5"?"A5 diária":"B5 semanal")}));
+
+const el=(h)=>{const t=document.createElement("template");t.innerHTML=h.trim();return t.content.firstChild};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function card(p){
+  const ph=`<div class="ph"><img src="${p.img}" alt="${esc(p.nome)}" loading="lazy">${p.own?'<span class="tag">Sua arte</span>':p.eco?'<span class="tag eco">Sustentável</span>':""}</div>`;
+  const c=el(`<article class="card${p.own?" own":""}">${ph}<div class="body"><div class="ref">Ref. ${p.ref}</div><h3>${esc(p.nome)}</h3><p class="spec">${esc(p.spec)}</p><div class="meta">${p.meta.map(m=>`<span>${esc(m)}</span>`).join("")}</div><button class="btn" type="button">Pedir orçamento deste modelo</button></div></article>`);
+  c.querySelector(".btn").addEventListener("click",()=>openForm(p));
+  return c;
+}
+function render(){
+  const fc=document.querySelector('[data-f="cal"][aria-pressed="true"]').dataset.v;
+  const fa=document.querySelector('[data-f="ag"][aria-pressed="true"]').dataset.v;
+  const gc=document.getElementById("grid-cal");gc.replaceChildren(...CAL.filter(p=>fc==="todos"||p.grp===fc).map(card));
+  document.getElementById("grid-own").replaceChildren(...OWN.map(card));
+  const ga=document.getElementById("grid-ag");ga.replaceChildren(...AG.filter(p=>fa==="todos"||(fa==="eco"?p.eco:p.fmts.includes(fa))).map(card));
+}
+document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(`.chip[data-f="${b.dataset.f}"]`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));render();}));
+
+function route(){
+  const v=location.hash==="#agendas"?"agendas":"calendarios";
+  document.getElementById("view-calendarios").hidden=v!=="calendarios";
+  document.getElementById("view-agendas").hidden=v!=="agendas";
+  ["calendarios","agendas"].forEach(k=>{const t=document.getElementById("tab-"+k);if(k===v)t.setAttribute("aria-current","page");else t.removeAttribute("aria-current")});
+}
+window.addEventListener("hashchange",route);
+
+let cur=null;const $=id=>document.getElementById(id);
+const SB="https://ihwystgzzotgmobvibgu.supabase.co/rest/v1/vitrine_pedidos";
+const SBK="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlod3lzdGd6em90Z21vYnZpYmd1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQwNDM3MjgsImV4cCI6MjA5OTYxOTcyOH0.Udf8_S8S3E6_FcMI2CEkWIz9mFDTdEuo17rjAPcgsgk";
+function openForm(p){
+  cur=p;$("p-ref").textContent="Ref. "+p.ref;$("p-title").textContent=p.nome;$("p-img").src=p.img;
+  $("f-opt").replaceChildren(...p.opts.map(o=>{const x=document.createElement("option");x.textContent=o;return x}));
+  $("f-opt").disabled=p.opts.length<2;
+  const q=p.ref.startsWith("CAL")?[10,25,50,100,200]:[10,25,50,100];
+  $("qq").replaceChildren(...q.map(n=>{const b=document.createElement("button");b.type="button";b.className="chip";b.textContent=n+" un";b.onclick=()=>{$("f-qtd").value=n;upd()};return b}));
+  $("f-qtd").value="";$("f-obs").value="";$("err").hidden=true;
+  $("step-form").hidden=false;$("step-ok").hidden=true;$("send").disabled=false;$("send").textContent="Enviar pedido de orçamento";
+  $("scrim").hidden=false;upd();setTimeout(()=>$("f-qtd").focus(),30);
+}
+function msg(){
+  const q=$("f-qtd").value.trim(),n=$("f-nome").value.trim(),e=$("f-emp").value.trim(),o=$("f-obs").value.trim();
+  let t=`Olá, All Visual! Gostaria de um orçamento:\n\n${cur.nome} (Ref. ${cur.ref})\nFormato: ${$("f-opt").value}\nQuantidade: ${q||"—"} unidades`;
+  if(o)t+=`\nObservações: ${o}`;
+  if(n||e)t+=`\n\n${[n,e].filter(Boolean).join(" · ")}`;
+  return t;
+}
+function upd(){
+  $("wa").href=`https://wa.me/${WA}?text=${encodeURIComponent(msg())}`;
+  try{localStorage.setItem("av-contato",JSON.stringify({n:$("f-nome").value,e:$("f-emp").value,m:$("f-email").value,t:$("f-tel").value}))}catch(_){}
+}
+["f-qtd","f-nome","f-emp","f-obs","f-opt","f-email","f-tel"].forEach(id=>$(id).addEventListener("input",upd));
+function erro(t,id){$("err").textContent=t;$("err").hidden=false;if(id)$(id).focus()}
+$("wa").addEventListener("click",ev=>{if(!(+$("f-qtd").value>0)){ev.preventDefault();erro("Informe a quantidade.","f-qtd")}});
+$("form").addEventListener("submit",async e=>{
+  e.preventDefault();$("err").hidden=true;
+  if($("f-site").value)return;
+  const qtd=parseInt($("f-qtd").value,10),nome=$("f-nome").value.trim(),email=$("f-email").value.trim();
+  if(!(qtd>0))return erro("Informe a quantidade.","f-qtd");
+  if(nome.length<2)return erro("Informe seu nome.","f-nome");
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))return erro("Confira o e-mail: é por ele que vamos responder.","f-email");
+  $("send").disabled=true;$("send").textContent="Enviando…";
+  const body={ref:cur.ref,modelo:cur.nome,formato:$("f-opt").value,quantidade:qtd,nome,email,
+    empresa:$("f-emp").value.trim()||null,telefone:$("f-tel").value.trim()||null,observacoes:$("f-obs").value.trim()||null};
+  try{
+    const r=await fetch(SB,{method:"POST",headers:{"apikey":SBK,"Authorization":"Bearer "+SBK,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify(body)});
+    if(!r.ok)throw new Error(r.status);
+    $("step-form").hidden=true;$("step-ok").hidden=false;
+  }catch(_){
+    $("send").disabled=false;$("send").textContent="Enviar pedido de orçamento";
+    erro("Não conseguimos enviar agora. Tente de novo ou fale com a gente pelo WhatsApp.");
+  }
+});
+$("again").addEventListener("click",()=>{$("scrim").hidden=true});
+const close=()=>{$("scrim").hidden=true};
+$("close").addEventListener("click",close);
+$("scrim").addEventListener("click",e=>{if(e.target.id==="scrim")close()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+try{const s=JSON.parse(localStorage.getItem("av-contato")||"{}");$("f-nome").value=s.n||"";$("f-emp").value=s.e||"";$("f-email").value=s.m||"";$("f-tel").value=s.t||""}catch(_){}
+render();route();
+</script>
+
+</body></html>
