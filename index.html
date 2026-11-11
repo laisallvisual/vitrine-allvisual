@@ -251,6 +251,7 @@ $("form").addEventListener("submit",async e=>{
     const r=await fetch(SB,{method:"POST",headers:{"apikey":SBK,"Authorization":"Bearer "+SBK,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify(body)});
     if(!r.ok)throw new Error(r.status);
     $("step-form").hidden=true;$("step-ok").hidden=false;
+    fetch("https://ihwystgzzotgmobvibgu.supabase.co/functions/v1/vitrine-aviso",{method:"POST",headers:{"apikey":SBK,"Authorization":"Bearer "+SBK,"Content-Type":"application/json"},body:"{}"}).catch(()=>{});
   }catch(_){
     $("send").disabled=false;$("send").textContent="Enviar pedido de orçamento";
     erro("Não conseguimos enviar agora. Tente de novo ou fale com a gente pelo WhatsApp.");
