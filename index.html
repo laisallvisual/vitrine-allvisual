@@ -66,6 +66,7 @@ h3{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.2;mar
 .btn{font:700 15px var(--body);border:0;border-radius:10px;padding:11px 14px;cursor:pointer;background:var(--navy);color:#fff;width:100%}
 .btn.sun{background:var(--sun);color:#13285a}
 .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.thumbs{display:flex;gap:6px;padding:8px 12px 0;flex-wrap:wrap}.thumbs button{width:44px;height:44px;padding:0;border:1px solid var(--line);border-radius:7px;background:#fff;cursor:pointer;overflow:hidden}.thumbs button[aria-pressed="true"]{border:2px solid var(--navy)}.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
 .own .ph{display:grid;place-items:center;background:linear-gradient(135deg,#1d3a78,#13285a)}
 .cover{width:56%;aspect-ratio:148/210;background:#f6c21c;border-radius:4px 10px 10px 4px;box-shadow:inset 10px 0 0 rgba(0,0,0,.18),0 18px 30px rgba(0,0,0,.35);display:grid;align-content:space-between;padding:14% 12%;color:#13285a;font-family:var(--display)}
 .cover b{font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1}
@@ -187,12 +188,18 @@ const AG=[
 ].map(([ref,img,nome,spec,fmts,eco])=>({ref,img:`img/ag-${img}.jpg`,nome,spec,fmts,eco:!!eco,
   opts:fmts.map(f=>f==="A5"?"A5 · plano diário · 352 páginas":"B5 · plano semanal · 144 páginas"),meta:fmts.map(f=>f==="A5"?"A5 diária":"B5 semanal")}));
 
+const FOTOS={"AG-01":5,"AG-02":5,"AG-03":5,"AG-04":3,"AG-05":4,"AG-06":5,"AG-07":4,"AG-08":4,"AG-09":5,"AG-10":4,"AG-11":5,"AG-12":5,"AG-13":4,"AG-14":4,"AG-15":5,"AG-16":4,"AG-17":3,"AG-18":5};
+AG.forEach(p=>{const n=FOTOS[p.ref];if(n){const b=p.img.replace(/\.jpg$/,"");p.fotos=[p.img,...Array.from({length:n-1},(_,i)=>`${b}-${i+2}.jpg`)]}});
 const el=(h)=>{const t=document.createElement("template");t.innerHTML=h.trim();return t.content.firstChild};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function card(p){
   const ph=`<div class="ph"><img src="${p.img}" alt="${esc(p.nome)}" loading="lazy">${p.own?'<span class="tag">Sua arte</span>':p.eco?'<span class="tag eco">Sustentável</span>':""}</div>`;
   const c=el(`<article class="card${p.own?" own":""}">${ph}<div class="body"><div class="ref">Ref. ${p.ref}</div><h3>${esc(p.nome)}</h3><p class="spec">${esc(p.spec)}</p><div class="meta">${p.meta.map(m=>`<span>${esc(m)}</span>`).join("")}</div><button class="btn" type="button">Pedir orçamento deste modelo</button></div></article>`);
   c.querySelector(".btn").addEventListener("click",()=>openForm(p));
+  if(p.fotos){const th=el(`<div class="thumbs" role="group" aria-label="Mais fotos">${p.fotos.map((f,i)=>`<button type="button" aria-pressed="${i===0}" aria-label="Foto ${i+1}"><img src="${f}" alt="" loading="lazy"></button>`).join("")}</div>`);
+    const main=c.querySelector(".ph img");
+    th.querySelectorAll("button").forEach((b,i)=>b.addEventListener("click",()=>{main.src=p.fotos[i];th.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)))}));
+    c.querySelector(".ph").after(th);}
   return c;
 }
 function render(){
